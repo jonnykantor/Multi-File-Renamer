@@ -1,5 +1,3 @@
-#define DEBUG
-
 #include <stdio.h>
 #include <vector>
 #include <string> 
@@ -18,8 +16,6 @@ static const std::string slash = "\\";
 #else
 static const std::string slash = "/";
 #endif
-
-#define DEBUG
 
 typedef std::vector <std::string> row_ind;
 typedef std::vector <row_ind> mat_col_ind;
