@@ -37,7 +37,7 @@ Removes every row in the user specified row range from the file list. This will 
 When activated, every row in the user specified row-range will be moved in-list to the new user-specified target row, displacing rows ahead of or behind the target depending on whether the move involved moving the rows up in the list or down. For example: If a list contains 10 file names, and the user wishes to move rows 2 to 5 up to row 7, the new order would be: 1-6-7-2-3-4-5-8-9-10; whereas if the user wishes to move rows 4-9 down to row 1, the new order would be 4-5-6-7-8-9-1-2-3-10. Note that, again, this will not affect the position of the files referred to by their counterparts in the list.
 
 #### Loading new files:
-When activated the current list of file-names will be discarded, and the user may specify a new group of files to load in for alterations.
+Discards the current list of file-names. The user specifies a new group of files to load in for renames via a file dialogue box.
 
 ### General operations:
 #### Saving changes:
