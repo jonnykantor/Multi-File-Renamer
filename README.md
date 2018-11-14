@@ -27,7 +27,7 @@ Similar to insertion, however the user may now specify a range of columns in add
 Users specify a row range and a column range. For each row in the row range, all columns in the column range will be removed. If all columns in a row are removed, they will be replaced by a single column containing no text. This operation does not remove rows.
 
 #### Splitting:
-The user may specify a given column, and a character-position in that column, along with a row-range for the operation to affect. When activated, the operation will split the given column at the user-specified character-position into two columns, with the name up to the character position in the first column, and the name following the character position in the second. For example: If a column contained the phrase "FooBar", the user could use the split operation at the 3rd character to split the column into column A containing: "Foo" and column B containing: "Bar".
+The user may specify one column, a character position in that column, and a row-range for the operation to affect. The character positions are zero-based. The operation will split the given column at the character position into two columns, with the name up to the position in the first column, and the name after and including the character position in the second. For example: If a column contained the phrase "FooBar", the user could use the split operation at the 3rd character to split the column into column A containing: "Foo" and column B containing: "Bar".
 
 ### File list modifying operations:
 #### Row-deletion:
