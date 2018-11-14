@@ -7,13 +7,13 @@ Project: Multi-File Renamer (until I decide on a better name at least)
 Version: 1.0.0 - first upload
 
 ## Outline:  
-This application allows the user to specify multiple files via a file dialogue box, and then perform any combination of several different available operations (described below) upon the existing text from the selected file's names. The user can then save these changes, which will permanently replace the previous names of the selected files.
+This application allows the user to specify multiple files via a file dialogue box, then perform any combination of available operations upon the text from the selected files' names. The user can then save these changes, which will update the names of the selected files on disk.
 
-As of version 1.0.0 the application uses the console or terminal as its GUI; it takes input from the keyboard for various operations, and updates on valid key-presses. Each update displays the current proposed state of the selected files' names (as copies, changes are not committed to the actual files until the user specifies such), along with a brief menu based on the current state of the application.
+The application uses a terminal as its GUI. The GUI updates on valid key-presses. Each update displays the edited state of the selected files' names and a menu based on the application state. Changes to file names are not written until they are saved.
 
-The selected files' names are displayed in a grid format, with each file occupying a sole row in the grid, and initially occupying only one column in the grid for the file name, with another for the file extension if one is present. Further user operations may add additional columns, or remove existing ones; when the changes made by the user are saved, the columns will be combined into one contiguous new name for the given file. 
+The selected files' names are displayed in a grid format. Each file occupies one row in the grid. The file name occupies one column and the extension occupies a second if available. User operations may add or remove columns. When changes are saved, the text in the columns will be combined to create the new name. 
 
-Almost all operations available to the user work over ranges of rows, columns, or both - as specified by the user. If the user wishes to work on individual rows or columns they can specify that the range affect only the areas they wish.
+Almost all operations available to the user work over ranges of rows, columns or both as specified by the user. If the user wishes to work on individual rows or columns they can specify that the range affect only the areas they wish.
 
 
 ## Current operations include:
