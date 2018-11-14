@@ -17,31 +17,34 @@ Almost all operations available to the user work over ranges of rows, columns, o
 
 
 ## Current operations include:
-### Insertion:
+### Filename modifying operations:
+#### Insertion:
 Insert either a phrase or iterator into the files' names at a user-specified column position, over a user-specified range of rows. Note that iterators will always begin at '1' and increase by one per row in the range. If the user wishes to insert a phrase they must first specify what phrase they wish to insert. Both operations will result in a new column being inserted at the user-specified position.
 
-### Replacement:
+#### Replacement:
 Similar to insertion, however the user may now specify a range of columns in addition to a range of rows. All column and row values in their respective ranges will be replaced by one column per row in the row-range, containing either the user-specified phrase or an iterator (again, starting at '1', and increasing by one per row in the row-range).
 
-### Erasure:
+#### Erasure:
 When activated, the values in the user-specified row-range and column-range will be erased. This will not delete the rows entirely, even if all column values in the row are erased (if all column values in a row are erased, they will temporarily be replaced by a single column containing nothing).
 
-### Row-deletion:
-When activated, every row in the user specified row-range will be removed entirely from the file list; note that this will NOT delete the files themselves from their containing folder, but merely remove them from the list of possible files to make name changes to.
-
-### Row-movement:
-When activated, every row in the user specified row-range will be moved in-list to the new user-specified target row, displacing rows ahead of or behind the target depending on whether the move involved moving the rows up in the list or down. For example: If a list contains 10 file names, and the user wishes to move rows 2 to 5 up to row 7, the new order would be: 1-6-7-2-3-4-5-8-9-10; whereas if the user wishes to move rows 4-9 down to row 1, the new order would be 4-5-6-7-8-9-1-2-3-10. Note that, again, this will not affect the position of the files referred to by their counterparts in the list.
-
-### Splitting:
+#### Splitting:
 The user may specify a given column, and a character-position in that column, along with a row-range for the operation to affect. When activated, the operation will split the given column at the user-specified character-position into two columns, with the name up to the character position in the first column, and the name following the character position in the second. For example: If a column contained the phrase "FooBar", the user could use the split operation at the 3rd character to split the column into column A containing: "Foo" and column B containing: "Bar".
 
-### Loading new files:
+### File list modifying operations:
+#### Row-deletion:
+When activated, every row in the user specified row-range will be removed entirely from the file list; note that this will NOT delete the files themselves from their containing folder, but merely remove them from the list of possible files to make name changes to.
+
+#### Row-movement:
+When activated, every row in the user specified row-range will be moved in-list to the new user-specified target row, displacing rows ahead of or behind the target depending on whether the move involved moving the rows up in the list or down. For example: If a list contains 10 file names, and the user wishes to move rows 2 to 5 up to row 7, the new order would be: 1-6-7-2-3-4-5-8-9-10; whereas if the user wishes to move rows 4-9 down to row 1, the new order would be 4-5-6-7-8-9-1-2-3-10. Note that, again, this will not affect the position of the files referred to by their counterparts in the list.
+
+#### Loading new files:
 When activated the current list of file-names will be discarded, and the user may specify a new group of files to load in for alterations.
 
-### Saving changes:
+### General operations:
+#### Saving changes:
 When activated, the user will be prompted to confirm whether they wish to save, if the user confirms this operation, the file names as they stand on the screen will replace the old file names of the files loaded by the user.
 
-### Undo/Redo:
+#### Undo/Redo:
 The application contains both undo and redo stacks. Note that currently saving will empty the stacks entirely.
 
 ## OS specific Issues:
