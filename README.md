@@ -27,11 +27,11 @@ Similar to insertion, however the user may now specify a range of columns in add
 Users specify a row range and a column range. For each row in the row range, all columns in the column range will be removed. If all columns in a row are removed, they will be replaced by a single column containing no text. This operation does not remove rows.
 
 #### Splitting:
-The user may specify one column, a character position in that column, and a row-range for the operation to affect. The character positions are zero-based. The operation will split the given column at the character position into two columns, with the name up to the position in the first column, and the name after and including the character position in the second. For example: If a column contained the phrase "FooBar", the user could use the split operation at the 3rd character to split the column into column A containing: "Foo" and column B containing: "Bar".
+The user may specify one column, a character position in that column, and a row range for the operation to affect. The character positions are zero-based. The operation will split the given column at the character position into two columns, with the name up to the position in the first column, and the name after and including the character position in the second. For example: If a column contained the phrase "FooBar", the user could use the split operation at the 3rd character to split the column into column A containing: "Foo" and column B containing: "Bar".
 
 ### File list modifying operations:
 #### Row-deletion:
-When activated, every row in the user specified row-range will be removed entirely from the file list; note that this will NOT delete the files themselves from their containing folder, but merely remove them from the list of possible files to make name changes to.
+Removes every row in the user specified row range from the file list. This will **not** delete the files themselves from their containing folder, but will remove them from the list of possible files to make name changes to. Unsaved changes in deleted rows will be lost.
 
 #### Row-movement:
 When activated, every row in the user specified row-range will be moved in-list to the new user-specified target row, displacing rows ahead of or behind the target depending on whether the move involved moving the rows up in the list or down. For example: If a list contains 10 file names, and the user wishes to move rows 2 to 5 up to row 7, the new order would be: 1-6-7-2-3-4-5-8-9-10; whereas if the user wishes to move rows 4-9 down to row 1, the new order would be 4-5-6-7-8-9-1-2-3-10. Note that, again, this will not affect the position of the files referred to by their counterparts in the list.
