@@ -21,7 +21,7 @@ Almost all operations available to the user work over ranges of rows, columns or
 #### Insertion:
 Insert either text or an iterator into the files' names at a user-specified column position, over a user-specified range of rows. Iterators will always begin at '1' and increase by one per row in the range. If the user wishes to insert text they must first specify what they wish to insert. This operation will result in a new column being inserted at the user-specified position.
 #### Replacement:
-Similar to insertion, however the user may now specify a range of columns in addition to a range of rows. All column and row values in their respective ranges will be replaced by one column per row in the row-range, containing either the user-specified phrase or an iterator (again, starting at '1', and increasing by one per row in the row-range).
+Similar to insertion, however the user may now specify a range of columns in addition to a range of rows. For each selected row, all columns in the column range will be replaced by one column. The new column contains either the user-specified text or an iterator.
 
 #### Erasure:
 When activated, the values in the user-specified row-range and column-range will be erased. This will not delete the rows entirely, even if all column values in the row are erased (if all column values in a row are erased, they will temporarily be replaced by a single column containing nothing).
