@@ -24,7 +24,7 @@ Insert either text or an iterator into the files' names at a user-specified colu
 Similar to insertion, however the user may now specify a range of columns in addition to a range of rows. For each selected row, all columns in the column range will be replaced by one column. The new column contains either the user-specified text or an iterator.
 
 #### Erasure:
-When activated, the values in the user-specified row-range and column-range will be erased. This will not delete the rows entirely, even if all column values in the row are erased (if all column values in a row are erased, they will temporarily be replaced by a single column containing nothing).
+Users specify a row range and a column range. For each row in the row range, all columns in the column range will be removed. If all columns in a row are removed, they will be replaced by a single column containing no text. This operation does not remove rows.
 
 #### Splitting:
 The user may specify a given column, and a character-position in that column, along with a row-range for the operation to affect. When activated, the operation will split the given column at the user-specified character-position into two columns, with the name up to the character position in the first column, and the name following the character position in the second. For example: If a column contained the phrase "FooBar", the user could use the split operation at the 3rd character to split the column into column A containing: "Foo" and column B containing: "Bar".
