@@ -59,16 +59,22 @@ However there are two more... less than satisfactory features of the tinyfiledia
 Currently only the source code is provided for this application; while in the future I hope to provide an installer or executable that currently isn't something I have the time (or if I'm being honest the expertise or equipment) to do. If you wish to use the application you will need to compile it yourself.
 
 ### For Linux: 
-You will need g++ 4.9 or another compiler that can accommodate the c++11 std. Typically you can compile from the command line via: 
+You will need g++ 4.9 or another compiler that can implements the C++11 standard. Typically you can compile from the command line via: 
 	
-`g++ -std=c++11 -o "<executable name>" <every c and cpp file here>`
+```g++ -std=c++11 -o "MFR" Dynamic_File_List.cpp Key_Press_Handler.cpp Multi_File_Renamer.cpp display_with_console.cpp tinyfiledialogs.c tokenizer.cpp```
 
-and run the executable from the command line: './<executable name>'. Alternately you can use the makefile I've provided.
+Alternately you can use the provided makefile by running:
+
+```make all```
+
+The executable can be run from the command line:
+
+```./MFR``` 
 
 ### For Windows: 
 Due to library requirements from tinyfiledialogs you will need to link against several libraries. If you don't have these libraries you can use the statically linked .exe I've provided here. If you do want to compile yourself, I used the Visual Studio development console directly to compile this application, and if you have that you should be able to do the same, using the command: 
 
-`lc /Fe<YourExecutableName> /EHsc <every c and cpp file here> -user32.lib -comdlg32.lib -shell32.lib -ole32.lib`
+```lc /FeMFR.exe /EHsc Dynamic_File_List.cpp Key_Press_Handler.cpp Multi_File_Renamer.cpp display_with_console.cpp tinyfiledialogs.c tokenizer.cpp -user32.lib -comdlg32.lib -shell32.lib -ole32.lib```
 
 I'm working on a version that doesn't use tinyfiledialogs as using it for this project turned out to be overkill
 
