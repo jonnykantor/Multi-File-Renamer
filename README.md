@@ -19,8 +19,7 @@ Almost all operations available to the user work over ranges of rows, columns or
 ## Current operations include:
 ### Filename modifying operations:
 #### Insertion:
-Insert either a phrase or iterator into the files' names at a user-specified column position, over a user-specified range of rows. Note that iterators will always begin at '1' and increase by one per row in the range. If the user wishes to insert a phrase they must first specify what phrase they wish to insert. Both operations will result in a new column being inserted at the user-specified position.
-
+Insert either text or an iterator into the files' names at a user-specified column position, over a user-specified range of rows. Iterators will always begin at '1' and increase by one per row in the range. If the user wishes to insert text they must first specify what they wish to insert. This operation will result in a new column being inserted at the user-specified position.
 #### Replacement:
 Similar to insertion, however the user may now specify a range of columns in addition to a range of rows. All column and row values in their respective ranges will be replaced by one column per row in the row-range, containing either the user-specified phrase or an iterator (again, starting at '1', and increasing by one per row in the row-range).
 
